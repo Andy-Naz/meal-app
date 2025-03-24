@@ -8,6 +8,7 @@ const CategoriesScreen = () => {
             data={CATEGORIES}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => <CategoryGridTile title={item.title} color={item.color} />}
+            numColumns={2}
         />
     )
 }
