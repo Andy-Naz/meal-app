@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar"
-import { StyleSheet } from "react-native"
+import { StyleSheet, Button, View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
+// import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import { Ionicons } from "@expo/vector-icons"
+import { createStackNavigator } from "@react-navigation/stack"
 
 import CategoriesScreen from "./screens/CategoriesScreen"
 import MealsOverviewScreen from "./screens/MealsOverviewScreen"
@@ -11,7 +12,7 @@ import MealDetailScreen from "./screens/MealDetailScreen"
 import FavoritesScreen from "./screens/FavoritesScreen"
 import FavoritesContextProvider from "./store/context/favoriteContext"
 
-const Stack = createNativeStackNavigator()
+const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator()
 
 function DrawerNavigator() {
@@ -20,7 +21,7 @@ function DrawerNavigator() {
             screenOptions={{
                 headerStyle: { backgroundColor: "#351401" },
                 headerTintColor: "white",
-                sceneContainerStyle: { backgroundColor: "#3f2f25" },
+                sceneStyle: { backgroundColor: "#3f2f25" },
                 drawerContentStyle: { backgroundColor: "#351401" },
                 drawerInactiveTintColor: "white",
                 drawerActiveTintColor: "#351401",
@@ -56,7 +57,8 @@ export default function App() {
                         screenOptions={{
                             headerStyle: { backgroundColor: "#351401" },
                             headerTintColor: "white",
-                            contentStyle: { backgroundColor: "#3f2f25" },
+                            // contentStyle: { backgroundColor: "#3f2f25" },
+                            cardStyle: { backgroundColor: "#3f2f25" },
                         }}
                     >
                         <Stack.Screen
